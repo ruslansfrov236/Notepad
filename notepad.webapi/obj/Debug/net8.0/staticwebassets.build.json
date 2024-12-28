@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "LwheVEpEM7t+E94uo4ejKr0a6ZnTmwCrp2QatJz4rPQ=",
+  "Source": "notepad.webapi",
+  "BasePath": "_content/notepad.webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "notepad.webapi/wwwroot",
+      "Source": "notepad.webapi",
+      "ContentRoot": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/",
+      "BasePath": "_content/notepad.webapi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/assets/image/female.png",
+      "SourceId": "notepad.webapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/",
+      "BasePath": "_content/notepad.webapi",
+      "RelativePath": "assets/image/female.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/image/female.png"
+    },
+    {
+      "Identity": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/assets/image/male.png",
+      "SourceId": "notepad.webapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/",
+      "BasePath": "_content/notepad.webapi",
+      "RelativePath": "assets/image/male.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/image/male.png"
+    }
+  ]
+}

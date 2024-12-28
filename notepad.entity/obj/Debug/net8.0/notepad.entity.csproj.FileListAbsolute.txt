@@ -1,0 +1,12 @@
+/home/ruslan/Documents/notepad/notepad.entity/bin/Debug/net8.0/notepad.entity.deps.json
+/home/ruslan/Documents/notepad/notepad.entity/bin/Debug/net8.0/notepad.entity.dll
+/home/ruslan/Documents/notepad/notepad.entity/bin/Debug/net8.0/notepad.entity.pdb
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.csproj.AssemblyReference.cache
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.GeneratedMSBuildEditorConfig.editorconfig
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.AssemblyInfoInputs.cache
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.AssemblyInfo.cs
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.csproj.CoreCompileInputs.cache
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.dll
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/refint/notepad.entity.dll
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.pdb
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/ref/notepad.entity.dll

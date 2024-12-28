@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/assets/image/female.png",
+      "PackagePath": "staticwebassets/assets/image/female.png"
+    },
+    {
+      "Id": "/home/ruslan/Documents/notepad/notepad.webapi/wwwroot/assets/image/male.png",
+      "PackagePath": "staticwebassets/assets/image/male.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.notepad.webapi.props",
+      "PackagePath": "build\\notepad.webapi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.notepad.webapi.props",
+      "PackagePath": "buildMultiTargeting\\notepad.webapi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.notepad.webapi.props",
+      "PackagePath": "buildTransitive\\notepad.webapi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.notepad.webapi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,17 @@
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.csproj.AssemblyReference.cache
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.GeneratedMSBuildEditorConfig.editorconfig
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.AssemblyInfoInputs.cache
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.AssemblyInfo.cs
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.csproj.CoreCompileInputs.cache
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.business.deps.json
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.business.dll
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.business.pdb
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.app.dll
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.entity.dll
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.app.pdb
+/home/ruslan/Documents/notepad/notepad.business/bin/Debug/net8.0/notepad.entity.pdb
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.csproj.CopyComplete
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.dll
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/refint/notepad.business.dll
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.pdb
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/ref/notepad.business.dll

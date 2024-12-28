@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notepad.webapi", "notepad.webapi\notepad.webapi.csproj", "{6935BF15-4E42-4CEB-B2CE-EA36819A4E48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notepad.entity", "notepad.entity\notepad.entity.csproj", "{19F769EA-C47F-47F0-9FAA-EBCFB4BC0B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notepad.business", "notepad.business\notepad.business.csproj", "{5A21A3B2-95C7-49B5-93EE-43F4763D32B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notepad.app", "notepad.app\notepad.app.csproj", "{84AAEFCF-63E9-4822-887C-346AA803310B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6935BF15-4E42-4CEB-B2CE-EA36819A4E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6935BF15-4E42-4CEB-B2CE-EA36819A4E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6935BF15-4E42-4CEB-B2CE-EA36819A4E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6935BF15-4E42-4CEB-B2CE-EA36819A4E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F769EA-C47F-47F0-9FAA-EBCFB4BC0B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F769EA-C47F-47F0-9FAA-EBCFB4BC0B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F769EA-C47F-47F0-9FAA-EBCFB4BC0B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F769EA-C47F-47F0-9FAA-EBCFB4BC0B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A21A3B2-95C7-49B5-93EE-43F4763D32B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A21A3B2-95C7-49B5-93EE-43F4763D32B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A21A3B2-95C7-49B5-93EE-43F4763D32B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A21A3B2-95C7-49B5-93EE-43F4763D32B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84AAEFCF-63E9-4822-887C-346AA803310B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84AAEFCF-63E9-4822-887C-346AA803310B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84AAEFCF-63E9-4822-887C-346AA803310B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84AAEFCF-63E9-4822-887C-346AA803310B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

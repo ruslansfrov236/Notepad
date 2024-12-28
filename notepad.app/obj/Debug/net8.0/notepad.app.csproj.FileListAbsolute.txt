@@ -1,0 +1,17 @@
+/home/ruslan/Documents/notepad/notepad.app/bin/Debug/net8.0/notepad.app.deps.json
+/home/ruslan/Documents/notepad/notepad.app/bin/Debug/net8.0/notepad.app.runtimeconfig.json
+/home/ruslan/Documents/notepad/notepad.app/bin/Debug/net8.0/notepad.app.dll
+/home/ruslan/Documents/notepad/notepad.app/bin/Debug/net8.0/notepad.app.pdb
+/home/ruslan/Documents/notepad/notepad.app/bin/Debug/net8.0/notepad.entity.dll
+/home/ruslan/Documents/notepad/notepad.app/bin/Debug/net8.0/notepad.entity.pdb
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.csproj.AssemblyReference.cache
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.GeneratedMSBuildEditorConfig.editorconfig
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.AssemblyInfoInputs.cache
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.AssemblyInfo.cs
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.csproj.CoreCompileInputs.cache
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.csproj.CopyComplete
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.dll
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/refint/notepad.app.dll
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.pdb
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.genruntimeconfig.cache
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/ref/notepad.app.dll
