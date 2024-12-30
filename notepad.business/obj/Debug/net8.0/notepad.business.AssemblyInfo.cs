@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("notepad.business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+517e088f874d68f0d9ed0ea6f0a2e25543729813")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+945d5fc211f06aa5c47bf507c65891b74b9e345c")]
 [assembly: System.Reflection.AssemblyProductAttribute("notepad.business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("notepad.business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
