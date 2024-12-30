@@ -13,6 +13,7 @@ public class AppUser:IdentityUser<string>
   
     public Gender Gender { get; set; }
     public DateOnly  Birthday { get; set;  }
+  
     public ICollection<Note> Notes { get; set; }
     [NotMapped]
     public IFormFile?   FormFile { get; set; }

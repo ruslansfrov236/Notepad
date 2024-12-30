@@ -10,11 +10,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("notepad.entity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+517e088f874d68f0d9ed0ea6f0a2e25543729813")]
 [assembly: System.Reflection.AssemblyProductAttribute("notepad.entity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("notepad.entity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

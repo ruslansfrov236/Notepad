@@ -15,3 +15,4 @@
 /home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/refint/notepad.business.dll
 /home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.pdb
 /home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/ref/notepad.business.dll
+/home/ruslan/Documents/notepad/notepad.business/obj/Debug/net8.0/notepad.business.sourcelink.json

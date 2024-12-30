@@ -71,7 +71,7 @@ public class UserService : IUserService
             user.ProfilePhoto = newImage;
         }
 
-        // Save the user to the database
+      
         var result = await _userManager.CreateAsync(user, model.Password);
         if (!result.Succeeded)
         {
@@ -85,7 +85,7 @@ public class UserService : IUserService
         if (!string.IsNullOrWhiteSpace(user.Email))
         {
             var code = _verificationCodeService.GenerateVerificationCode();
-
+   
             await _verificationCodeService.SaveVerificationCodeAsync(user.Id, code);
             await _mailService.SendVerificationCodeEmailAsync(user.Email, code, user.FullName);
             

@@ -1,6 +1,7 @@
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using notepad.business.Abstract;
+using notepad.business.Dto_s.Tokens;
 using notepad.business.Validator;
 using Exception = System.Exception;
 
@@ -12,19 +13,20 @@ public class VerificationController : ControllerBase
 {
 
 
-    readonly private IAuthService _authService;
+    readonly private IVerificationCodeService _verificationCodeService;
 
-    public VerificationController(IAuthService authService)
+    public VerificationController(IVerificationCodeService verificationCodeService)
     {
-        _authService = authService;
+        _verificationCodeService = verificationCodeService;
     }
 
+
     [HttpPost]
-    public async Task<IActionResult> Index(string userId, string code)
+    public async Task<IActionResult> Index([FromBody]CreateVerificationDto model)
     {
         try
         {
-             await _authService.VerificationCodeAsync(userId, code);
+             await _verificationCodeService.VerificationCodeAsync(model);
             return Ok();
         }
         catch (BadRequestException ex)

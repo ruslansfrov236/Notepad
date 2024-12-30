@@ -78,4 +78,6 @@ public class AuthService : IAuthService
             await _mailService.SendPasswordResetMailAsync(email,  user.Id , resetToken);
         }
     }
+
+   
 }

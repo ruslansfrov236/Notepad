@@ -58,7 +58,7 @@ public class MailService : IMailService
             <p>Dear {name},</p>
             <p>Your login verification code is:</p>
             <h2>{code}</h2>
-            <p>Please use this code within <span> id='countdown'>60</span> minutes to complete your login.</p>
+            <p>Please use this code within 60 minutes to complete your login.</p>
             <p>Best regards,<br>Your Team</p>
        
  

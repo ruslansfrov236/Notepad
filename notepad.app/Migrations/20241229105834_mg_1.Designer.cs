@@ -12,8 +12,8 @@ using notepad.app.Context;
 namespace notepad.app.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241228082811_mg_2")]
-    partial class mg_2
+    [Migration("20241229105834_mg_1")]
+    partial class mg_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -318,12 +318,14 @@ namespace notepad.app.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("isDeleted")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("VerificationCodes");
                 });
@@ -390,9 +392,22 @@ namespace notepad.app.Migrations
                     b.Navigation("AppUser");
                 });
 
+            modelBuilder.Entity("notepad.entity.VerificationCode", b =>
+                {
+                    b.HasOne("notepad.entity.Entities.Identity.AppUser", "User")
+                        .WithMany("VerificationCodes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("notepad.entity.Entities.Identity.AppUser", b =>
                 {
                     b.Navigation("Notes");
+
+                    b.Navigation("VerificationCodes");
                 });
 #pragma warning restore 612, 618
         }

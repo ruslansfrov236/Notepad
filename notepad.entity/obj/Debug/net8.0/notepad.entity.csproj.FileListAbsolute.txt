@@ -10,3 +10,4 @@
 /home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/refint/notepad.entity.dll
 /home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.pdb
 /home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/ref/notepad.entity.dll
+/home/ruslan/Documents/notepad/notepad.entity/obj/Debug/net8.0/notepad.entity.sourcelink.json

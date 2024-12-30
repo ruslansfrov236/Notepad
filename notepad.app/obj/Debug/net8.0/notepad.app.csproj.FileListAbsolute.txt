@@ -15,3 +15,4 @@
 /home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.pdb
 /home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.genruntimeconfig.cache
 /home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/ref/notepad.app.dll
+/home/ruslan/Documents/notepad/notepad.app/obj/Debug/net8.0/notepad.app.sourcelink.json

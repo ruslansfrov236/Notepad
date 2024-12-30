@@ -15,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ApplicationServiceRegistration();
 builder.Services.BusinessServiceRegistration();
 
-// Add data protection services
+
 builder.Services.AddDataProtection();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

@@ -31,9 +31,12 @@ public static class ServiceRegistration
                 policy.User.RequireUniqueEmail = true;
 
 
+                policy.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+                policy.Lockout.MaxFailedAccessAttempts = 3;
+                policy.Lockout.AllowedForNewUsers = true;
+
                 // Giriş və təsdiq siyasəti
-                policy.SignIn.RequireConfirmedAccount = true;
-                policy.SignIn.RequireConfirmedEmail = true;
+               
             }).AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 
@@ -42,7 +45,4 @@ public static class ServiceRegistration
         service.AddScoped<INoteReadRepository, NoteReadRepository>();
         service.AddScoped<INoteWriteRepository, NoteWriteRepository>();
     }
-
-
-   
 }
