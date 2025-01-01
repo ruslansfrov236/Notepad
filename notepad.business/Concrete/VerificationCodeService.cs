@@ -30,15 +30,18 @@ public class VerificationCodeService:IVerificationCodeService
           
             var cachedCode = await _verificationReadRepository.GetSingle(
                 a => a.UserId == model.UserId && a.Code == model.Code);
-            await RemoveRange();
+           
             if (cachedCode == null)
             {
                 throw new BadRequestException("The verification code is incorrect or does not exist.");
             }
  
-            if (DateTime.UtcNow > cachedCode.ExpiryTime)
+            if (DateTime.UtcNow.ToLocalTime() > cachedCode.ExpiryTime)
             {
+                
+                
                 await Remove(cachedCode.Id.ToString());
+                
                 throw new BadRequestException("The verification code has expired.");
             }
  
@@ -46,7 +49,7 @@ public class VerificationCodeService:IVerificationCodeService
  
             if (isConfirmed)
             {
-                await Remove(cachedCode.Id.ToString());
+                await RemoveRange();
             }
         }
         catch (BadRequestException ex)
@@ -79,7 +82,7 @@ public class VerificationCodeService:IVerificationCodeService
         var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
  
       
-        var confirmResult =  _userManager.ConfirmEmailAsync(user, token);
+        var confirmResult = await _userManager.ConfirmEmailAsync(user, token);
 
       
         return true;
@@ -104,7 +107,7 @@ public class VerificationCodeService:IVerificationCodeService
         {
             UserId = userId,
             Code = code,
-            ExpiryTime = DateTime.UtcNow.AddMinutes(60) // UTC vaxt istifadə olunur
+            ExpiryTime = DateTime.UtcNow.ToLocalTime().AddMinutes(60) 
         };
  
         await _verificationWriteRepository.AddAsync(verificationCode);

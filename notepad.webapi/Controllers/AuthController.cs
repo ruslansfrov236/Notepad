@@ -2,6 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using notepad.business.Abstract;
+using notepad.business.Dto_s.Auth;
 using notepad.business.Validator;
 
 namespace notepad.webapi.Controllers;
@@ -16,12 +17,12 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Login(string password, string usernameOrEmail, int accessTokenLifeTime)
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginDto model)
     {
         try
         {
-            var user = await _authService.LoginAsync(password, usernameOrEmail, 900);
+            var user = await _authService.LoginAsync(model);
 
             return Ok(user);
         }

@@ -7,6 +7,7 @@ public interface INoteService
 {
     Task<ICollection<Note>> GetAllAsync();
     Task<Note> GetById(string id);
+    Task<bool> EmailNotification();
     Task<bool> Create(CreateNoteDto model);
     Task<bool> Update(UpdateNoteDto model);
     Task<bool> DeleteDays(string id);

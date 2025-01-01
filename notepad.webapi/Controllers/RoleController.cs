@@ -1,4 +1,5 @@
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using notepad.business.Abstract;
 using notepad.business.Validator;
@@ -7,6 +8,8 @@ using notepad.entity.Entities.Enum;
 namespace notepad.webapi.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(AuthenticationSchemes = "Admin", Roles = "Admin, Manager")]
+
 public class RoleController : Controller
 {
     readonly private IRoleService _roleService;

@@ -15,18 +15,20 @@ public class NoteService : INoteService
 {
     readonly private INoteReadRepository _noteReadRepository;
     readonly private INoteWriteRepository _noteWriteRepository;
+    readonly private IMailService _mailService;
     readonly private IHttpContextAccessor _httpContextAccessor;
     readonly private IFileService _fileService;
     readonly private UserManager<AppUser> _userManager;
 
     public NoteService(INoteReadRepository noteReadRepository, INoteWriteRepository noteWriteRepository,
-        IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager, IFileService fileService)
+        IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager, IFileService fileService, IMailService mailService)
     {
         _noteReadRepository = noteReadRepository;
         _noteWriteRepository = noteWriteRepository;
         _httpContextAccessor = httpContextAccessor;
         _userManager = userManager;
         _fileService = fileService;
+        _mailService = mailService;
     }
 
     public async Task<ICollection<Note>> GetAllAsync()
@@ -43,6 +45,28 @@ public class NoteService : INoteService
                    ?? throw new NotFoundException("Values not found ");
         return note;
     }
+
+    public async Task<bool> EmailNotification()
+    {
+      
+        var notes = await _noteReadRepository.GetWhere(a => a.NotifiedDateTime <= DateTime.UtcNow && a.NotifiedDateTime != null).ToListAsync();
+
+        foreach (var note in notes)
+        {
+          
+            var userEmail = new[] { note.AppUser.Email };
+
+          
+            var singleNote = new List<Note> { note };
+
+          
+            await _mailService.NotificationEmailAsync(userEmail, singleNote);
+        }
+
+     
+        return true;
+    }
+
 
     public async Task<bool> Create(CreateNoteDto model)
     {

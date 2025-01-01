@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices.JavaScript;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using notepad.business.Abstract;
@@ -8,6 +9,7 @@ using notepad.business.Validator;
 namespace notepad.webapi.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+
 public class UserController : ControllerBase
 {
     readonly private IUserService _userService;
@@ -18,6 +20,7 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize(AuthenticationSchemes = "Admin", Roles = "Admin, Manager")]
     public async Task<IActionResult> Index(int page , int size)
     {
         var user = await _userService.GetAllUsersAsync(page, size);
@@ -25,12 +28,14 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("GetRoleToUserAsync")]
+    [Authorize(AuthenticationSchemes = "Admin", Roles = "Admin, Manager")]
     public async Task<IActionResult> Index(string userIdOrName)
     {
         var roles = await _userService.GetRoleToUserAsync(userIdOrName);
         return Ok(roles);
     }
     [HttpPost("UpdatedPassword")]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public async Task<IActionResult> UpdatedPassword(string userId, string resetToken, string newPassword)
     {
         var user =  _userService.UpdatedPassword(userId , resetToken, newPassword);
@@ -38,6 +43,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("registration")]
+   
     public async Task<IActionResult> Index([FromForm]CreateRegistrationDto model)
     {
         try

@@ -31,10 +31,10 @@ public class AuthService : IAuthService
         _mailService = mailService;
     }
     
-    public async Task<Token> LoginAsync(string password, string usernameOrEmail, int accessTokenLifeTime)
+    public async Task<Token> LoginAsync(LoginDto model )
     {
-        AppUser? user = await _userManager.FindByNameAsync(usernameOrEmail) ??
-            await _userManager.FindByEmailAsync(usernameOrEmail)??
+        AppUser? user = await _userManager.FindByNameAsync(model.usernameOrEmail) ??
+            await _userManager.FindByEmailAsync(model.usernameOrEmail)??
             throw new NotFoundException("User or email not found.");
 
        
@@ -42,10 +42,10 @@ public class AuthService : IAuthService
         if (!emailConfirmed)
             throw new BadRequestException("Email not verified");
 
-        SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
-        if (result.Succeeded)
+        var result = await _signInManager.PasswordSignInAsync(user, model.password, true, false);
+  if (result.Succeeded)
         {
-            Token token = await _tokenHandler.CreateAccessToken(accessTokenLifeTime, user);
+            Token token = await _tokenHandler.CreateAccessToken(model.accessTokenLifeTime, user);
             await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 900);
 
             return token;

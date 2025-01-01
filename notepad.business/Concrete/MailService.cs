@@ -3,6 +3,7 @@ using System.Net.Mail;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using notepad.business.Abstract;
+using notepad.entity.Entities;
 
 namespace notepad.business.Concrete;
 
@@ -67,6 +68,86 @@ public class MailService : IMailService
 
         await SendMailAsync(to, "Login Verification Code", emailContent);
     }
+
+    public async Task NotificationEmailAsync(string[] tos, ICollection<Note> notes)
+{
+    foreach (var note in notes)
+    {
+        var noteDetailsLink = $"{_configuration["AngularClientUrl"]}/notes/details/{note.Id}";
+
+        var mailContent = $@"
+        <html>
+        <head>
+            <style>
+                body {{
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    background-color: #f4f4f9;
+                }}
+                .email-container {{
+                    max-width: 600px;
+                    margin: 20px auto;
+                    padding: 20px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                    background-color: #ffffff;
+                }}
+                .email-header {{
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 20px;
+                }}
+                .email-body {{
+                    font-size: 16px;
+                    color: #555;
+                    line-height: 1.8;
+                }}
+                .email-link {{
+                    display: inline-block;
+                    padding: 12px 20px;
+                    background-color: #007bff;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                }}
+                .email-footer {{
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: #888;
+                    text-align: center;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class='email-container'>
+                <div class='email-header'>
+                    New Note Notification
+                </div>
+                <div class='email-body'>
+                    Dear {note.AppUser.FullName},<br><br>
+                    We would like to inform you that a new note has been added or updated in your account.<br><br>
+                    <strong>Note Title:</strong> {note.Title}<br>
+                    <strong>Created On:</strong> {note.CreatedDate:MMMM dd, yyyy}<br><br>
+                    To view the full details of this note, please click the link below:<br><br>
+                    <a href='{noteDetailsLink}' target='_blank' class='email-link'>View Note Details</a><br><br>
+                    If you did not expect this notification, please contact our support team immediately.
+                </div>
+                <div class='email-footer'>
+                    Best regards,<br>
+                    The Notepad Team
+                </div>
+            </div>
+        </body>
+        </html>";
+
+        // E-poçt göndərilməsi
+        await SendMailAsync(tos, "New Note Notification", mailContent);
+    }
+}
 
     public async Task SendPasswordResetMailAsync(string to, string userId, string resetToken)
     {

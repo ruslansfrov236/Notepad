@@ -1,4 +1,5 @@
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using notepad.business.Abstract;
 using notepad.business.Dto_s.Tokens;
@@ -9,6 +10,7 @@ namespace notepad.webapi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+
 public class VerificationController : ControllerBase
 {
 

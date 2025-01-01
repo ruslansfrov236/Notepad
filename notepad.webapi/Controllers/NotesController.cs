@@ -1,15 +1,22 @@
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using notepad.business.Abstract;
 using notepad.business.Dto_s.Notes;
 using notepad.business.Validator;
+using notepad.entity.Entities.Enum;
+using NuGet.Protocol;
 
 namespace notepad.webapi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
+    [Authorize(AuthenticationSchemes = "Admin", Roles = "Admin, Manager, User")]
+
+
     public class NotesController: ControllerBase
     {
         readonly private INoteService _noteService;
@@ -20,6 +27,7 @@ namespace notepad.webapi.Controllers
         }
 
         [HttpGet]
+        
         public async Task<IActionResult> Index()
         {
             var note = await _noteService.GetAllAsync();
@@ -84,7 +92,7 @@ namespace notepad.webapi.Controllers
         }
 
 
-        [HttpPut("{id}")]
+        [HttpPut("deletedays/{id}")]
         public async Task<IActionResult> DeleteDays(string id)
         {
             await _noteService.DeleteDays(id);
@@ -97,7 +105,7 @@ namespace notepad.webapi.Controllers
             await _noteService.UpdateRange(isDeleted);
             return Ok();
         }
-        [HttpPut("deleterange")]
+        [HttpDelete("deleterange")]
         public async Task<IActionResult> DeleteRange(bool isDeleted)
         {
             await _noteService.DeleteRange(isDeleted);
